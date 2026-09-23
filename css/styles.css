@@ -332,9 +332,9 @@ button {
 .hero-join-qr-cap {
   margin: 0;
   text-align: center;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   line-height: 1.35;
-  min-height: 2.7em;
+  white-space: nowrap;
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -373,7 +373,7 @@ button {
     justify-self: stretch;
     max-width: none;
     width: 100%;
-    grid-template-columns: minmax(148px, 42%) 1fr;
+    grid-template-columns: minmax(168px, 48%) 1fr;
     align-items: center;
     gap: 14px;
     padding: 12px;
@@ -388,8 +388,7 @@ button {
   }
 
   .hero-join-qr-cap {
-    font-size: 0.64rem;
-    min-height: 2.7em;
+    font-size: 0.58rem;
   }
 
   .hero-join-title {
