@@ -354,6 +354,18 @@
       openLightbox(Number(indexed.dataset.lb), lightboxItems);
       return;
     }
+    const compareBtn = e.target.closest(".compare-media[data-lb-src]");
+    if (compareBtn) {
+      const block = compareBtn.closest(".compare-block");
+      const set = [...(block || document).querySelectorAll(".compare-media[data-lb-src]")].map((el) => ({
+        kind: "image",
+        src: el.dataset.lbSrc,
+        caption: el.dataset.lbCaption || "",
+      }));
+      const idx = [...(block || document).querySelectorAll(".compare-media[data-lb-src]")].indexOf(compareBtn);
+      openLightbox(Math.max(0, idx), set);
+      return;
+    }
     const direct = e.target.closest(".media-open[data-src]");
     if (direct) {
       const parent = direct.closest(".archive-media");
