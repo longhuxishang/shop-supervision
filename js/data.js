@@ -296,14 +296,6 @@ window.SITE_DATA = {
       media: [{ kind: "image", src: "assets/photos/courtyard-windows-web.jpg" }],
     },
     {
-      id: "t-202609-b8",
-      date: "2026-09-18",
-      type: "photo",
-      title: "8 号楼南侧商铺私自开窗",
-      body: "在外墙私自开窗到小区。",
-      media: [{ kind: "image", src: "assets/photos/b8-window-web.jpg" }],
-    },
-    {
       id: "t-20260729-east",
       date: "2026-07-29",
       type: "photo",
