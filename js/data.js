@@ -305,14 +305,6 @@ window.SITE_DATA = {
       body: "加建钢架与屋面。",
       media: [{ kind: "image", src: "assets/photos/b9-south-shop-web.jpg" }],
     },
-    {
-      id: "t-202609-plan",
-      date: "2026-09-14",
-      type: "photo",
-      title: "对照规划图纸",
-      body: "小区原有规划蓝图，业主标注产权范围。",
-      media: [{ kind: "image", src: "assets/photos/planning-blueprint-web.jpg" }],
-    },
   ],
 
   closing:
