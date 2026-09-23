@@ -337,8 +337,8 @@ button {
   }
 
   .hero-join {
-    justify-self: center;
-    max-width: 320px;
+    justify-self: stretch;
+    max-width: none;
     width: 100%;
     grid-template-columns: 92px 1fr;
     align-items: center;
