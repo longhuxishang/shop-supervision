@@ -93,6 +93,18 @@ window.SITE_DATA = {
     },
     {
       kind: "image",
+      src: "assets/photos/courtyard-windows-web.jpg",
+      caption: "商铺外墙向小区内部开窗，空调外机贴墙设置。",
+      tag: "小区内侧",
+    },
+    {
+      kind: "image",
+      src: "assets/photos/entrance-pharmacy-web.jpg",
+      caption: "沿街商铺已亮出高济药房招牌。",
+      tag: "沿街实景",
+    },
+    {
+      kind: "image",
       src: "assets/photos/shop110-area.png",
       caption: "110 商铺：门牌号 110，房屋面积 137.21㎡（含上下两层），预售申报价 20000 元／㎡。",
       tag: "110面积公示",
@@ -214,6 +226,22 @@ window.SITE_DATA = {
    * 新增：把条目插到数组最前面，date 用 YYYY-MM-DD
    */
   archive: [
+    {
+      id: "t-20260923-3",
+      date: "2026-09-23",
+      type: "photo",
+      title: "邻居监督：小区内侧外墙开窗",
+      body: "商铺外墙向小区内部开窗，空调外机贴墙设置。",
+      media: [{ kind: "image", src: "assets/photos/courtyard-windows-web.jpg" }],
+    },
+    {
+      id: "t-20260923-4",
+      date: "2026-09-23",
+      type: "photo",
+      title: "邻居监督：沿街高济药房实景",
+      body: "龙湖熙上沿街商铺已亮出高济药房招牌。",
+      media: [{ kind: "image", src: "assets/photos/entrance-pharmacy-web.jpg" }],
+    },
     {
       id: "t-20260923-1",
       date: "2026-09-23",
