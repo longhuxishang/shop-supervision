@@ -1,10 +1,10 @@
 /**
- * 龙湖熙上苑三期 · 商铺违规加建情况通报
+ * 龙湖熙上 · 商铺违规加建情况通报
  * 文案来源：业主通报终稿；图片来源：资源/违建图片
  */
 window.SITE_DATA = {
   meta: {
-    community: "龙湖熙上苑三期",
+    community: "龙湖熙上",
     title: "关于本小区商铺违规加建的情况通报",
     updated: "2026年9月",
     tagline: "原来露天的区域，被浇筑顶板、加盖钢架，改成了商铺——面宽从 5.05 米扩到近 9 米。",
@@ -214,7 +214,7 @@ window.SITE_DATA = {
   official: [
     {
       name: "郑州市自然资源和规划局",
-      detail: "熙上苑三期相关公示",
+      detail: "龙湖熙上相关公示",
       url: "https://zrzyhghj.zhengzhou.gov.cn/jsgc/6971547.jhtml",
     },
     {
