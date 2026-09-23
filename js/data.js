@@ -211,9 +211,28 @@ window.SITE_DATA = {
     { num: "05", title: "部门查处", text: "请规划、城管、住建、消防依法核查，处理结果向业主公开。" },
   ],
 
-  official: [],
-
-  channels: ["12345", "城管", "住建", "消防", "物业"],
+  complaints: [
+    {
+      label: "微信小程序",
+      value: "郑州12345",
+      href: "",
+    },
+    {
+      label: "市长信箱",
+      value: "12345",
+      href: "tel:12345",
+    },
+    {
+      label: "投诉电话",
+      value: "12345",
+      href: "tel:12345",
+    },
+    {
+      label: "城市管理",
+      value: "12319",
+      href: "tel:12319",
+    },
+  ],
 
   /** 证据材料：公示链接 + 文件下载 + 图片摘录 */
   materials: {

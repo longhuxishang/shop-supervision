@@ -210,10 +210,22 @@
     window.__MATERIAL_LB__ = materialLb;
   }
 
-  /* —— Official —— */
-  document.getElementById("channel-list").innerHTML = data.channels
-    .map((c) => `<li>${escapeHtml(c)}</li>`)
-    .join("");
+  /* —— Complaints —— */
+  const complaintGrid = document.getElementById("complaint-grid");
+  if (complaintGrid) {
+    complaintGrid.innerHTML = (data.complaints || [])
+      .map((c) => {
+        const valueHtml = c.href
+          ? `<a class="complaint-value" href="${escapeAttr(c.href)}">${escapeHtml(c.value)}</a>`
+          : `<span class="complaint-value">${escapeHtml(c.value)}</span>`;
+        return `
+        <div class="complaint-item reveal">
+          <span class="complaint-label">${escapeHtml(c.label)}</span>
+          ${valueHtml}
+        </div>`;
+      })
+      .join("");
+  }
 
   document.getElementById("disclaimer").textContent = data.disclaimer;
 
