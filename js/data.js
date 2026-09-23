@@ -243,11 +243,22 @@ window.SITE_DATA = {
       media: [{ kind: "image", src: "assets/photos/entrance-pharmacy-web.jpg" }],
     },
     {
-      id: "t-20260923-1",
+      id: "t-20260923-decor",
       date: "2026-09-23",
+      type: "photo",
+      title: "邻居监督：小区内部装饰条开窗",
+      body: "外墙装饰条被开洞装窗，正对小区内部。",
+      media: [
+        { kind: "image", src: "assets/photos/decor-strip-window-web.jpg" },
+        { kind: "image", src: "assets/photos/window-open-1-web.png" },
+      ],
+    },
+    {
+      id: "t-20260922-1",
+      date: "2026-09-22",
       type: "video",
-      title: "邻居监督：开窗户",
-      body: "现场拍摄商铺私自开窗。",
+      title: "邻居监督：正对 8 号楼东边开窗",
+      body: "正对 8 号楼东边开窗现场。",
       media: [
         {
           kind: "video",
@@ -269,14 +280,6 @@ window.SITE_DATA = {
           poster: "assets/photos/pharmacy-interior-ceiling-web.png",
         },
       ],
-    },
-    {
-      id: "t-202609-decor",
-      date: "2026-09-18",
-      type: "photo",
-      title: "小区内部装饰条开窗",
-      body: "外墙装饰条被开洞装窗，正对小区内部。",
-      media: [{ kind: "image", src: "assets/photos/decor-strip-window-web.jpg" }],
     },
     {
       id: "t-202609-b8",
