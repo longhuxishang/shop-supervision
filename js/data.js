@@ -227,8 +227,8 @@ window.SITE_DATA = {
    */
   archive: [
     {
-      id: "t-20260923-3",
-      date: "2026-09-23",
+      id: "t-20260917-1",
+      date: "2026-09-17",
       type: "photo",
       title: "邻居监督：空调外机",
       body: "空调外机挂进小区一侧。",
