@@ -171,22 +171,27 @@
     )
     .join("");
 
-  /* —— Materials (evidence files + images) —— */
-  const materials = data.materials || { files: [], images: [] };
+  /* —— Materials (evidence links + files + images) —— */
+  const materials = data.materials || { links: [], files: [], images: [] };
+  const materialsLinks = document.getElementById("materials-links");
   const materialsFiles = document.getElementById("materials-files");
   const materialsImages = document.getElementById("materials-images");
 
-  if (materialsFiles) {
-    materialsFiles.innerHTML = (materials.files || [])
+  function renderMaterialLinks(el, items, withDownload) {
+    if (!el) return;
+    el.innerHTML = (items || [])
       .map(
         (f) => `
-      <a class="material-file" href="${escapeAttr(f.href)}" target="_blank" rel="noopener noreferrer" download>
+      <a class="material-file" href="${escapeAttr(f.href)}" target="_blank" rel="noopener noreferrer"${withDownload ? " download" : ""}>
         <strong>${escapeHtml(f.title)}</strong>
-        <span>${escapeHtml(f.detail)} · 下载／查阅 →</span>
+        <span>${escapeHtml(f.detail)} →</span>
       </a>`
       )
       .join("");
   }
+
+  renderMaterialLinks(materialsLinks, materials.links, false);
+  renderMaterialLinks(materialsFiles, materials.files, true);
 
   if (materialsImages) {
     const materialLb = [];
@@ -206,16 +211,6 @@
   }
 
   /* —— Official —— */
-  document.getElementById("official-grid").innerHTML = data.official
-    .map(
-      (o) => `
-    <a class="official-link" href="${escapeAttr(o.url)}" target="_blank" rel="noopener noreferrer">
-      <strong>${escapeHtml(o.name)}</strong>
-      <span>${escapeHtml(o.detail)} →</span>
-    </a>`
-    )
-    .join("");
-
   document.getElementById("channel-list").innerHTML = data.channels
     .map((c) => `<li>${escapeHtml(c)}</li>`)
     .join("");

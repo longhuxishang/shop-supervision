@@ -211,23 +211,24 @@ window.SITE_DATA = {
     { num: "05", title: "部门查处", text: "请规划、城管、住建、消防依法核查，处理结果向业主公开。" },
   ],
 
-  official: [
-    {
-      name: "郑州市自然资源和规划局",
-      detail: "龙湖熙上相关公示",
-      url: "https://zrzyhghj.zhengzhou.gov.cn/jsgc/6971547.jhtml",
-    },
-    {
-      name: "楼盘／信访相关公示",
-      detail: "360 房产信息公示",
-      url: "https://www.360fc.cn/xinfang/xf_index.html?id=2938&mode=0",
-    },
-  ],
+  official: [],
 
   channels: ["12345", "城管", "住建", "消防", "物业"],
 
-  /** 证据材料：文件下载 + 图片摘录 */
+  /** 证据材料：公示链接 + 文件下载 + 图片摘录 */
   materials: {
+    links: [
+      {
+        title: "郑州市自然资源和规划局",
+        detail: "龙湖熙上相关公示",
+        href: "https://zrzyhghj.zhengzhou.gov.cn/jsgc/6971547.jhtml",
+      },
+      {
+        title: "楼盘／信访相关公示",
+        detail: "360 房产信息公示",
+        href: "https://www.360fc.cn/xinfang/xf_index.html?id=2938&mode=0",
+      },
+    ],
     files: [
       {
         title: "中华人民共和国城乡规划法",
