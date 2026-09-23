@@ -224,8 +224,8 @@ window.SITE_DATA = {
         href: "https://zrzyhghj.zhengzhou.gov.cn/jsgc/6971547.jhtml",
       },
       {
-        title: "楼盘／信访相关公示",
-        detail: "360 房产信息公示",
+        title: "360 房产信息公示",
+        detail: "龙湖熙上相关楼盘公示",
         href: "https://www.360fc.cn/xinfang/xf_index.html?id=2938&mode=0",
       },
     ],
