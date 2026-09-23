@@ -302,33 +302,39 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  align-items: start;
 }
 
 .hero-join-qr-item {
   margin: 0;
   display: grid;
   gap: 6px;
+  min-width: 0;
 }
 
 .hero-join-qr-wrap {
   width: 100%;
+  aspect-ratio: 1;
   padding: 6px;
+  box-sizing: border-box;
   background: #fff;
+  overflow: hidden;
 }
 
 .hero-join-qr {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
 .hero-join-qr-cap {
   margin: 0;
   text-align: center;
-  font-size: 0.72rem;
-  line-height: 1.3;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  min-height: 2.7em;
   color: rgba(255, 255, 255, 0.82);
 }
 
@@ -382,7 +388,8 @@ button {
   }
 
   .hero-join-qr-cap {
-    font-size: 0.68rem;
+    font-size: 0.64rem;
+    min-height: 2.7em;
   }
 
   .hero-join-title {
