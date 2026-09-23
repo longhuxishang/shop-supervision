@@ -171,6 +171,40 @@
     )
     .join("");
 
+  /* —— Materials (evidence files + images) —— */
+  const materials = data.materials || { files: [], images: [] };
+  const materialsFiles = document.getElementById("materials-files");
+  const materialsImages = document.getElementById("materials-images");
+
+  if (materialsFiles) {
+    materialsFiles.innerHTML = (materials.files || [])
+      .map(
+        (f) => `
+      <a class="material-file" href="${escapeAttr(f.href)}" target="_blank" rel="noopener noreferrer" download>
+        <strong>${escapeHtml(f.title)}</strong>
+        <span>${escapeHtml(f.detail)} · 下载／查阅 →</span>
+      </a>`
+      )
+      .join("");
+  }
+
+  if (materialsImages) {
+    const materialLb = [];
+    materialsImages.innerHTML = (materials.images || [])
+      .map((img) => {
+        const idx = materialLb.length;
+        materialLb.push({ kind: "image", src: img.src, caption: img.caption || img.tag || "" });
+        return `
+        <button type="button" class="material-image" data-material-lb="${idx}" aria-label="${escapeAttr(img.tag || "查看图片")}">
+          <img src="${escapeAttr(img.src)}" alt="${escapeAttr(img.caption || "")}" loading="lazy" />
+          <span class="tag">${escapeHtml(img.tag || "")}</span>
+        </button>`;
+      })
+      .join("");
+
+    window.__MATERIAL_LB__ = materialLb;
+  }
+
   /* —— Official —— */
   document.getElementById("official-grid").innerHTML = data.official
     .map(
@@ -352,6 +386,11 @@
     const indexed = e.target.closest("[data-lb]");
     if (indexed) {
       openLightbox(Number(indexed.dataset.lb), lightboxItems);
+      return;
+    }
+    const materialBtn = e.target.closest("[data-material-lb]");
+    if (materialBtn && window.__MATERIAL_LB__) {
+      openLightbox(Number(materialBtn.dataset.materialLb), window.__MATERIAL_LB__);
       return;
     }
     const compareBtn = e.target.closest(".compare-media[data-lb-src]");
