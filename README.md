@@ -1,8 +1,8 @@
 # 龙湖熙上 · 商铺违规加建情况通报
 
-React + TypeScript + SCSS 站点。仓库：`longhuxishang/shop-supervision`。
+React + TypeScript + SCSS 站点。源码仓：`longhuxishang/shop-supervision`。
 
-线上地址：https://longhuxishang.github.io/shop-supervision/
+线上地址：https://longhuxishang.github.io/（产物同步到 `longhuxishang/longhuxishang.github.io`）
 
 ## 开发
 
@@ -38,28 +38,31 @@ export ELEN_CDN_ACCESS_KEY=...
 export ELEN_CDN_SECRET_KEY=...
 ```
 
-在 `.elencli.cjs` 的 `cdn` 段填写 `provider` / `bucket` / `region` / `domain`（占位符需改成真实值）。
+在 `.elencli.cjs` 的 `cdn` 段填写 `provider` / `bucket` / `region` / `domain`。
 
 ```bash
-# 压缩 public/assets → .cdn-staging/assets（视频需本机 ffmpeg）
 npm run cdn:compress
-
-# 预览将上传的对象键
 npm run cdn:upload:dry
-
-# 上传到 CDN
 npm run cdn:upload
 ```
 
-构建时若资源已上 CDN，设置：
+构建走 CDN 时：
 
 ```bash
-# 例：https://cdn.example.com/longhuxishang
 export VITE_CDN_BASE=https://你的CDN域名/longhuxishang
 npm run build
 ```
 
-未设置 `VITE_CDN_BASE` 时仍使用站点相对路径（含 Vite `base`：`/shop-supervision/`）。
+## GitHub Pages
+
+```bash
+npm run build
+npm run pages          # elen pages → longhuxishang/longhuxishang.github.io (main)
+```
+
+目标仓 Settings → Pages → Deploy from branch：`main` / 根目录。
+
+`elen pub` 的 `postpublish` 会自动执行 `npm run pages`。
 
 ## 日常更新时间线
 
@@ -73,10 +76,5 @@ npx elen release patch
 npx elen pub
 ```
 
-`prepublish` 会执行 `thumbs`（增量）→ `cdn:compress` → `build`。CDN 上传需自行 `npm run cdn:upload`（或把该命令写进 hooks）。
-
-## GitHub Pages
-
-推送到 `main` 后由 `.github/workflows/deploy.yml` 构建并发布 `dist/`。
-
-仓库 Settings → Pages → Source 选 **GitHub Actions**。
+`prepublish`：`thumbs` → `cdn:compress` → `build`  
+`postpublish`：`pages`（同步 dist）

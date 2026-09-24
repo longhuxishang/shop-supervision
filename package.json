@@ -14,6 +14,7 @@
     "cdn:compress": "elen compress",
     "cdn:upload": "elen cdn",
     "cdn:upload:dry": "elen cdn --dry-run",
+    "pages": "elen pages",
     "release": "elen release",
     "pub": "elen pub"
   },

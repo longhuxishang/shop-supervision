@@ -2,10 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
 
-// 项目 Pages：https://longhuxishang.github.io/shop-supervision/
+// 组织 Pages：https://longhuxishang.github.io/（dist 同步到 longhuxishang.github.io 仓根）
 export default defineConfig({
   plugins: [react()],
-  base: "/shop-supervision/",
+  base: "/",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
