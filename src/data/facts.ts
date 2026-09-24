@@ -8,10 +8,10 @@ export const facts: FactItem[] = [
     note: "占用的全是业主共有空间",
   },
   {
-    value: "近800",
-    unit: "万",
-    label: "被圈走的业主共有资产",
-    note: "按商铺公示售价 2 万／㎡估算",
+    value: "侵占",
+    unit: "",
+    label: "业主共有资产",
+    note: "违建占用的均为业主共有部分，不属商铺产权范围",
   },
   {
     value: "近1",
