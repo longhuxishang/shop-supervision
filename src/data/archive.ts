@@ -7,6 +7,54 @@ import type { ArchiveItem } from "@/types/site";
  */
 export const archive: ArchiveItem[] = [
   {
+    id: "t-20260924-xinfang",
+    date: "2026-09-24",
+    type: "update",
+    title: "已启动郑州智慧信访联名",
+    body: "业主已走信访流程。请通过「郑好办」扫描二维码加入联名；其他渠道扫描需填写联名人基础信息。",
+    media: [{ kind: "image", src: "assets/photos/xinfang-petition-qr-web.png" }],
+  },
+  {
+    id: "t-20260924-shelves",
+    date: "2026-09-24",
+    type: "photo",
+    title: "邻居监督：药店货柜已安装仍在施工",
+    body: "店内货柜、柜台已基本到位，工人仍在现场施工，与门贴巡查「违建」结论并存。",
+    media: [{ kind: "image", src: "assets/photos/pharmacy-shelves-install-web.jpg" }],
+  },
+  {
+    id: "t-20260924-notices",
+    date: "2026-09-24",
+    type: "notice",
+    title: "邻居监督：门贴物业巡查文书",
+    body: "门上张贴安全隐患整改通知、装修许可证与装修巡查记录；巡查记载为违建，但现场施工仍在继续。",
+    media: [{ kind: "image", src: "assets/photos/property-patrol-notices-web.jpg" }],
+  },
+  {
+    id: "t-20260923-chengguan",
+    date: "2026-09-23",
+    type: "update",
+    title: "与城管、书记二次沟通",
+    body: "业主再次当面沟通。对方称走程序，仍无实质性进展：尚未出具是否违建的正式认定书，亦未立案。",
+    media: [
+      { kind: "image", src: "assets/photos/chengguan-meeting-20260923-web.jpg" },
+      { kind: "image", src: "assets/photos/chengguan-meeting-docs-20260923-web.jpg" },
+      { kind: "image", src: "assets/photos/pharmacy-crowd-night-20260923-web.jpg" },
+    ],
+  },
+  {
+    id: "t-20260923-restaurant",
+    date: "2026-09-23",
+    type: "photo",
+    title: "邻居监督：饭店烟管已装、装修近尾声",
+    body: "固始鹅块等饭店外墙已安装排烟管道，院内仍有施工；门头与内部装修接近完成，违建认定与立案仍未落地。",
+    media: [
+      { kind: "image", src: "assets/photos/restaurant-smoke-duct-20260923-web.jpg" },
+      { kind: "image", src: "assets/photos/restaurant-gushi-fitout-20260923-web.jpg" },
+      { kind: "image", src: "assets/photos/restaurant-courtyard-vent-20260923-web.jpg" },
+    ],
+  },
+  {
     id: "t-20260923-4",
     date: "2026-09-23",
     type: "photo",

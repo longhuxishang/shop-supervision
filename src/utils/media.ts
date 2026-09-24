@@ -25,7 +25,7 @@ export function thumbSrc(src: string): string {
   if (/^https?:\/\//i.test(src) || src.startsWith("data:")) return src;
   const normalized = src.replace(/^\//, "");
   if (!normalized.startsWith("assets/photos/")) return normalized;
-  if (/wechat-.*-qr/i.test(normalized)) return normalized;
+  if (/(?:wechat-.*-qr|xinfang-.*-qr)/i.test(normalized)) return normalized;
   return normalized
     .replace(/^assets\/photos\//, "assets/thumbs/photos/")
     .replace(/\.(jpe?g|png|gif|webp)$/i, ".webp");

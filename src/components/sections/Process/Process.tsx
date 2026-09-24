@@ -16,7 +16,7 @@ export function Process({ steps }: ProcessProps) {
       <div className="section-inner">
         <SectionHead
           title="整改流程"
-          lead="从取证、通报到查处与恢复原状；邻居拍照与整改公示整理在册，持续公布。"
+          lead="取证、通报已完成；与城管、书记二次沟通后仍待正式违建认定与立案。现场装修（药店货柜、饭店烟管等）仍在推进，邻居拍照与门贴文书持续在册公布。"
         />
         <div className="process-track">
           {steps.map((s) => (
