@@ -34,8 +34,8 @@ module.exports = {
     commitMessage: "deploy: site v{{version}}",
   },
   hooks: {
-    // pub：缩略图 → 压缩 staging → 构建 →（发版）→ CDN 上传 → 同步 Pages
-    prepublish: "npm run thumbs && npm run cdn:compress && npm run build",
-    postpublish: "npm run cdn:upload && npm run pages",
+    // pub：缩略图 → 构建 →（发版）→ 同步 Pages（资源暂走 GitHub Pages，CDN 可选手动）
+    prepublish: "npm run thumbs && npm run build",
+    postpublish: "npm run pages",
   },
 };

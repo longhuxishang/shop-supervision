@@ -1,7 +1,7 @@
 {
   "name": "shop-supervision",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "龙湖熙上 · 商铺违规加建情况通报",
   "scripts": {

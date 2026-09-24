@@ -4,6 +4,8 @@ React + TypeScript + SCSS 站点。源码仓：`longhuxishang/shop-supervision`�
 
 线上地址：https://longhuxishang.github.io/（产物同步到 `longhuxishang/longhuxishang.github.io`）
 
+图片/视频等静态资源当前走 **GitHub Pages 本站路径**（`/assets/...`），便于微信内打开。
+
 ## 开发
 
 ```bash
@@ -18,6 +20,8 @@ npm run build    # 输出到 dist/
 npm run preview
 ```
 
+构建时请勿设置 `VITE_CDN_BASE`（否则资源会指向 CDN）。
+
 ## 缩略图（与 elen compress 无关）
 
 列表/网格用 `public/assets/thumbs/`，Lightbox 详情仍用 `photos/` 原图。
@@ -29,30 +33,6 @@ npm run thumbs:force   # 强制全量重生成
 
 `elen pub` 的 `prepublish` 会自动跑 `npm run thumbs`（增量）。
 
-## CDN（@elenjs/cli）
-
-环境变量（密钥不入库）：
-
-```bash
-export ELEN_CDN_ACCESS_KEY=...
-export ELEN_CDN_SECRET_KEY=...
-```
-
-在 `.elencli.cjs` 的 `cdn` 段填写 `provider` / `bucket` / `region` / `domain`。
-
-```bash
-npm run cdn:compress
-npm run cdn:upload:dry
-npm run cdn:upload
-```
-
-构建走 CDN 时：
-
-```bash
-export VITE_CDN_BASE=https://你的CDN域名/longhuxishang
-npm run build
-```
-
 ## GitHub Pages
 
 ```bash
@@ -62,7 +42,16 @@ npm run pages          # elen pages → longhuxishang/longhuxishang.github.io (m
 
 目标仓 Settings → Pages → Deploy from branch：`main` / 根目录。
 
-`elen pub` 的 `postpublish` 会执行 `cdn:upload` → `pages`。
+`elen pub` 的 `postpublish` 会执行 `npm run pages`。
+
+## CDN（可选，默认不启用）
+
+脚本仍保留，需要时手动执行。微信对七牛测试域名常拦截，正式使用请绑定自有 HTTPS 域名，并设置：
+
+```bash
+export VITE_CDN_BASE=https://你的CDN域名/longhuxishang
+npm run cdn:compress && npm run cdn:upload && npm run build && npm run pages
+```
 
 ## 日常更新时间线
 
@@ -70,7 +59,7 @@ npm run pages          # elen pages → longhuxishang/longhuxishang.github.io (m
 
 ## 发版
 
-默认分支为 **`master`**。
+默认分支为 **`master`**。版本：`0.1.1`。
 
 ```bash
 npx elen release patch
@@ -78,5 +67,5 @@ npx elen release patch
 npx elen pub
 ```
 
-`prepublish`：`thumbs` → `cdn:compress` → `build`  
-`postpublish`：`cdn:upload` → `pages`（同步 dist 到 longhuxishang.github.io）
+`prepublish`：`thumbs` → `build`  
+`postpublish`：`pages`（同步 dist 到 longhuxishang.github.io）
