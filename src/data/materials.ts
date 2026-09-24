@@ -33,12 +33,6 @@ export const materials: MaterialsData = {
       tag: "物业巡查文书",
     },
     {
-      src: "assets/photos/xinfang-petition-qr-web.png",
-      caption:
-        "郑州智慧信访联名二维码。请通过「郑好办」扫描加入联名。",
-      tag: "信访联名",
-    },
-    {
       src: "assets/photos/law-henan-art43-web.jpg",
       caption:
         "河南省实施办法第四十三条：新建、改建、扩建须申请核发建设工程规划许可证。",
