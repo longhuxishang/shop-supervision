@@ -53,6 +53,18 @@ export const evidence: EvidenceItem[] = [
   },
   {
     kind: "image",
+    src: "assets/photos/courtyard-smoke-chimney-web.jpg",
+    caption: "排烟烟囱装在小区内部一侧，正对业主共有空间。",
+    tag: "小区内烟囱",
+  },
+  {
+    kind: "image",
+    src: "assets/photos/courtyard-chimney-new-window-web.jpg",
+    caption: "小区内实拍：外墙加装排烟口／烟囱，并新开窗户（图中红圈标注）。",
+    tag: "烟囱与新开窗",
+  },
+  {
+    kind: "image",
     src: "assets/photos/pharmacy-night-web.jpg",
     caption: "药店夜间开灯效果。",
     tag: "夜间实景",
