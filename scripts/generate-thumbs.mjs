@@ -24,7 +24,7 @@ const MAX_EDGE = 640;
 const WEBP_QUALITY = 72;
 
 /** 二维码等不生成缩略图（列表也不会引用） */
-const SKIP_RE = /(?:wechat-.*-qr|xinfang-.*-qr)/i;
+const SKIP_RE = /wechat-.*-qr/i;
 
 const IMAGE_RE = /\.(jpe?g|png|webp|gif)$/i;
 

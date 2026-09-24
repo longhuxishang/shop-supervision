@@ -1,7 +1,6 @@
 import type { ComplaintItem } from "@/types/site";
 
 export const complaints: ComplaintItem[] = [
-  { label: "郑州智慧信访", value: "郑好办扫码联名", href: "#archive" },
   { label: "微信小程序", value: "郑州12345", href: "" },
   { label: "市长信箱", value: "12345", href: "tel:12345" },
   { label: "投诉电话", value: "12345", href: "tel:12345" },

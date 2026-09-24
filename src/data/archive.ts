@@ -7,14 +7,6 @@ import type { ArchiveItem } from "@/types/site";
  */
 export const archive: ArchiveItem[] = [
   {
-    id: "t-20260924-xinfang",
-    date: "2026-09-24",
-    type: "update",
-    title: "已启动郑州智慧信访联名",
-    body: "业主已走信访流程。请通过「郑好办」扫描二维码加入联名；其他渠道扫描需填写联名人基础信息。",
-    media: [{ kind: "image", src: "assets/photos/xinfang-petition-qr-web.png" }],
-  },
-  {
     id: "t-20260924-shelves",
     date: "2026-09-24",
     type: "photo",
