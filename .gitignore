@@ -1,24 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build
+dist/
+.cdn-staging/
+.vite/
+
+# Editor / OS
+.DS_Store
+*.log
+.vscode/
+.idea/
+
+# Env
+.env
+.env.*
+
 # 中文文件名视频与站点引用的英文副本重复，不入库
-assets/videos/开窗户.mp4
-assets/videos/南边商铺内部改造.mp4
+public/assets/videos/开窗户.mp4
+public/assets/videos/南边商铺内部改造.mp4
 
 # 仅保留 web 压缩版的超大原图
-assets/photos/b9-south-shop.jpg
-assets/photos/pharmacy-interior.jpg
-assets/photos/elevator-poster.png
-assets/photos/planning-drawing.png
-assets/photos/bulletin-long.jpg
-assets/photos/facade-damage.png
-assets/photos/window-open-1.png
-assets/photos/property-l2.jpg
-assets/slides/image5.jpg
-assets/slides/image6.jpg
-assets/slides/image9.jpg
-assets/slides/
-assets/photos/courtyard-windows.png
-assets/photos/entrance-pharmacy.png
-assets/photos/shop-interior-lit.png
-assets/photos/wechat-oa-qr.png
-assets/photos/gate-original.png
-assets/photos/law-henan-art43.png
-assets/photos/law-henan-art48.png
+public/assets/photos/b9-south-shop.jpg
+public/assets/photos/pharmacy-interior.jpg
+public/assets/photos/elevator-poster.png
+public/assets/photos/planning-drawing.png
+public/assets/photos/bulletin-long.jpg
+public/assets/photos/facade-damage.png
+public/assets/photos/window-open-1.png
+public/assets/photos/property-l2.jpg
+public/assets/slides/image5.jpg
+public/assets/slides/image6.jpg
+public/assets/slides/image9.jpg
+public/assets/slides/
+public/assets/photos/courtyard-windows.png
+public/assets/photos/entrance-pharmacy.png
+public/assets/photos/shop-interior-lit.png
+public/assets/photos/wechat-oa-qr.png
+public/assets/photos/gate-original.png
+public/assets/photos/law-henan-art43.png
+public/assets/photos/law-henan-art48.png
