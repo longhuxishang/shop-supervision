@@ -1,6 +1,6 @@
 /** @type {import('@elenjs/release').ElenCliConfig} */
 module.exports = {
-  allowBranch: ["main", "master"],
+  allowBranch: ["master"],
   bumpFiles: ["package.json", "package-lock.json"],
   tagPrefix: "v",
   releasePrefix: "release-v",
@@ -26,6 +26,7 @@ module.exports = {
     },
   },
   pages: {
+    // Pages 仓分支（与源码仓 master 无关）
     repo: "longhuxishang/longhuxishang.github.io",
     branch: "main",
     dist: "dist",
@@ -33,8 +34,8 @@ module.exports = {
     commitMessage: "deploy: site v{{version}}",
   },
   hooks: {
-    // pub 前：增量缩略图 → CDN 压缩 → 构建；pub 后：同步 dist 到组织 Pages 仓
+    // pub：缩略图 → 压缩 staging → 构建 →（发版）→ CDN 上传 → 同步 Pages
     prepublish: "npm run thumbs && npm run cdn:compress && npm run build",
-    postpublish: "npm run pages",
+    postpublish: "npm run cdn:upload && npm run pages",
   },
 };

@@ -62,7 +62,7 @@ npm run pages          # elen pages → longhuxishang/longhuxishang.github.io (m
 
 目标仓 Settings → Pages → Deploy from branch：`main` / 根目录。
 
-`elen pub` 的 `postpublish` 会自动执行 `npm run pages`。
+`elen pub` 的 `postpublish` 会执行 `cdn:upload` → `pages`。
 
 ## 日常更新时间线
 
@@ -70,11 +70,13 @@ npm run pages          # elen pages → longhuxishang/longhuxishang.github.io (m
 
 ## 发版
 
+默认分支为 **`master`**。
+
 ```bash
 npx elen release patch
-# 合并 release-v* 回主分支后
+# 合并 release-v* 回 master 后
 npx elen pub
 ```
 
 `prepublish`：`thumbs` → `cdn:compress` → `build`  
-`postpublish`：`pages`（同步 dist）
+`postpublish`：`cdn:upload` → `pages`（同步 dist 到 longhuxishang.github.io）
